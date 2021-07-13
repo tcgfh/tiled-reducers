@@ -17,4 +17,11 @@ describe('TiledMap reducer', () => {
       tilesets: [],
     });
   });
+
+  it('returns a different tiled map objet when no state and ation is pased', () => {
+    const firstCall = tiledMap();
+    const secondCall = tiledMap();
+    expect(firstCall).toEqual(secondCall);
+    expect(firstCall === secondCall).toBeFalse();
+  });
 });
