@@ -15,4 +15,11 @@ describe('tileLayer', () => {
       y: 0,
     });
   });
+
+  it('returns a different empty object on each call when no initia state is provded', () => {
+    const firstCall = tileLayer();
+    const secondCall = tileLayer();
+    expect(firstCall).toEqual(secondCall);
+    expect(firstCall === secondCall).toBeFalse();
+  });
 });
