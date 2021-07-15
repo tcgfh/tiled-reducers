@@ -18,7 +18,7 @@ describe('TiledMap reducer', () => {
     });
   });
 
-  it('returns a different tiled map objet when no state and ation is pased', () => {
+  it('returns a different tiled map object when no state and ation is pased', () => {
     const firstCall = tiledMap();
     const secondCall = tiledMap();
     expect(firstCall).toEqual(secondCall);
